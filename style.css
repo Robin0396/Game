@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("double-decker.jpg");
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "weather map riddles"
+        "airport map resources"
+        "airport map resources"
+        ". small-box .";
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    width: 90vw;
+    height: 90vh;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.weather {
+    grid-area: weather;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+}
+
+.map-container {
+    grid-area: map;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 80%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.riddles {
+    grid-area: riddles;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+
+}
+
+.riddle-box {
+    background-color: white;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 90%;
+    text-align: left;
+}
+
+
+
+.current-airport {
+    grid-area: airport;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+}
+
+.resources-left {
+    grid-area: resources;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+}
+
+.airport-found {
+    grid-area: airport;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #e9f7ef;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+}
+
+
