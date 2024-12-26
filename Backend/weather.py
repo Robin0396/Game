@@ -1,7 +1,8 @@
 import requests
 from airport import Airport
 
-APIkey = "8d3d5c48d959d00c7826bf07c570923b"
+APIkey = "37f1de112bb28649db06ae22a5ebdde3"
+
 
 class Weather:
     def __init__(self):
@@ -27,8 +28,8 @@ class Weather:
             return e
 
     def get_weather_for_airports(self):
-        airports= self.airport.fetch_airports()
+        airports = self.airport.fetch_airports()
         for airport in airports:
-            weather= self.fetch_weather(airport['latitude_deg'], airport['longitude_deg'])
+            weather = self.fetch_weather(airport['latitude_deg'], airport['longitude_deg'])
             airport['weather'] = weather
-            return airports
+        return airports

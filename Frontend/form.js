@@ -38,7 +38,7 @@ document.querySelector('#startGame').addEventListener('submit', async function (
         return;
     }
     playerState= {
-        player_id: gameState.player_id,
+        id: gameState.player_id,
         money: 20000,
         range: 5000,
         time: 900,
@@ -47,9 +47,7 @@ document.querySelector('#startGame').addEventListener('submit', async function (
         total_airports: airports
     };
 
-    document.querySelector('#money').innerHTML= playerState.money;
-    document.querySelector('#range').innerHTML= playerState.range;
-    document.querySelector('#time').innerHTML= playerState.time;
-    document.querySelector('#health').innerHTML= playerState.health;
-    console.log('Game initialized', playerState);
+    localStorage.setItem('playerState', JSON.stringify(playerState));
+    window.location.href='index.html'
+
 })
